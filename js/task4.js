@@ -35,21 +35,14 @@ const allUserss = [
     balance: 2764,
   },
 ];
-// const getTotalBalanceByGender = (allUserss, gender) => {
-//   return allUserss
-//     .filter((user) => user.gender === gender)
-//     .reduce((previousUser, user) => {
-//       return previousUser + user.balance;
-//     }, 0);
-// };
 const getTotalBalanceByGender = (allUserss, gender) => {
-  const genderBalance = allUserss
+  return allUserss
     .filter((user) => user.gender === gender)
     .reduce((previousUser, user) => {
       return previousUser + user.balance;
     }, 0);
-  return genderBalance;
 };
+
 console.log(getTotalBalanceByGender(allUserss, "male")); // 12053
 
 console.log(getTotalBalanceByGender(allUserss, "female")); // 8863
